@@ -1,0 +1,14 @@
+# GitHub Pages 配置
+# Jekyll 主题（使用最小配置避免冲突）
+
+# 排除 Jekyll 处理的文件
+exclude:
+  - README.md
+  - DEPLOYMENT.md
+  - .gitignore
+  - netlify.toml
+  - vercel.json
+
+# 包含点文件
+include:
+  - .gitignore

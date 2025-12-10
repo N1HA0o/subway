@@ -5,6 +5,23 @@
 ![Project Banner](https://img.shields.io/badge/Status-Beta-yellow)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+## 🌐 在线演示
+
+### 部署选项：
+
+1. **GitHub Pages**（推荐）
+   - 需要在 GitHub 仓库设置中启用 Pages
+   - 预期链接：`https://n1ha0o.github.io/subway/`
+
+2. **快速部署到 Netlify**
+   - [![部署到 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/N1HA0o/subway)
+   - 一键部署，自动获得 HTTPS 链接
+
+3. **本地运行**
+   - 参考下方的"快速开始"章节
+
+📖 **详细部署指南**: 请查看 [DEPLOYMENT.md](DEPLOYMENT.md)
+
 ## 🎮 核心特性
 
 - **手势控制**: 使用摄像头捕捉手部动作，通过 MediaPipe Hands 实现手势识别

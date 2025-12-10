@@ -1,0 +1,27 @@
+# Netlify 配置文件
+
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=*, microphone=()"
+
+# 摄像头权限策略
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Permissions-Policy = "camera=*, microphone=()"
+
+# SPA 路由支持（虽然这个项目不需要，但以防万一）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
