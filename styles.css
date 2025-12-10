@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.loading-content p {
+    font-size: 1.2em;
+    opacity: 0.7;
+    margin-bottom: 2em;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto 1em;
+}
+
+.loading-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #fff 0%, #aaa 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.loading-text {
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+
+/* Start Screen */
+#start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+}
+
+.start-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 2em;
+}
+
+.start-content h1 {
+    font-size: 4em;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.instructions {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    opacity: 0.8;
+}
+
+.controls {
+    list-style: none;
+    margin-bottom: 3em;
+    font-size: 1.1em;
+}
+
+.controls li {
+    margin: 1em 0;
+    opacity: 0.9;
+}
+
+#start-button {
+    padding: 1em 3em;
+    font-size: 1.2em;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+#start-button:hover {
+    background: #ddd;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.camera-permission {
+    margin-top: 2em;
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+
+/* Game Container */
+#game-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+/* Debug Overlay */
+#debug-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.debug-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.debug-info span {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Fade effects */
+.fade-out {
+    opacity: 0 !important;
+}

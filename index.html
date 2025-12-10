@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阈光之旅 | Threshold Light Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>阈光之旅</h1>
+            <p>Threshold Light Journey</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">正在加载...</p>
+        </div>
+    </div>
+
+    <div id="start-screen" class="hidden">
+        <div class="start-content">
+            <h1>阈光之旅</h1>
+            <p class="instructions">使用手势控制角色移动</p>
+            <ul class="controls">
+                <li>🤚 伸出右手 → 向右移动</li>
+                <li>🤚 伸出左手 → 向左移动</li>
+            </ul>
+            <button id="start-button">开始游戏</button>
+            <p class="camera-permission">游戏需要访问您的摄像头</p>
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <!-- Canvas for game rendering -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Hidden video element for MediaPipe -->
+        <video id="camera-video" autoplay playsinline style="display: none;"></video>
+
+        <!-- Debug overlay -->
+        <div id="debug-overlay">
+            <div class="debug-info">
+                <span id="fps-counter">FPS: 0</span>
+                <span id="gesture-status">手势: 无</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+
+    <!-- Game modules -->
+    <script src="js/config.js"></script>
+    <script src="js/gestureDetector.js"></script>
+    <script src="js/character.js"></script>
+    <script src="js/lighting.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
